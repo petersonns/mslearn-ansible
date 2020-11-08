@@ -12,6 +12,10 @@
     loop:
     - testuser1
     - testuser2
+  - name: Update all packages to the latest version
+    apt:
+      name: aptitude 
+      upgrade: yes
   - name: ensure nginx is at the latest version
     apt: name=nginx state=latest
   - name: start nginx
